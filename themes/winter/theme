@@ -1,0 +1,105 @@
+include "../minimum/template"
+
+screen {
+  background = "$$/without-leaves.png,,light-gray/black"
+
+  panel {
+    width = 100%
+    height = "14%/3"
+  }
+
+  panel {
+    id = __menu__
+    popup = abs
+    extend = 1
+    width = 70%
+    halign = center
+    valign = top
+    max_items = 8
+
+    top_left = "$$/menu_nw.png,,light-gray/black,#0x250F"
+    top = "$$/menu_n.png,tiling,light-gray/black,#0x2501"
+    top_right = "$$/menu_ne.png,,light-gray/black,#0x2513"
+    left = "$$/menu_w.png,tiling,light-gray/black,#0x2503"
+    right = "$$/menu_e.png,tiling,light-gray/black,#0x2503"
+    bottom_left = "$$/menu_sw.png,,light-gray/black,#0x2517"
+    bottom = "$$/menu_s.png,tiling,light-gray/black,#0x2501"
+    bottom_right = "$$/menu_se.png,tiling,light-gray/black,#0x251B"
+    background = "$$/menu_c.png"
+  }
+
+  panel {
+    halign = center
+    width = 80%
+    height = 6%/1
+    id = __timeout__
+    border_size = 3/0
+    border_color = "#000060"
+
+    progressbar {
+      width = 100%
+      height = 100%
+      color = "#C0C0F0/cyan:#6060B0/blue"
+    }
+  }
+
+  panel {
+    margin_size = "10/1"
+    text {
+      text = "Select an item with the arrow keys and press Enter to boot."
+      font = "lime Regular 10"
+      color = "#00000/light-gray"
+    }
+    text {
+      text = "F1 - help, F2 - change theme, F3 - change resolution."
+      font = "lime Regular 10"
+      color = "#00000/light-gray"
+    }
+  }
+}
+
+template_menuitem {
+  panel {
+    parameters = "class=image.class:title=text.text"
+    background = ":$$/select_c.png,,black/light-gray,#0"
+    direction = left_to_right
+    space = 1
+    image {}
+    text {
+      valign = center
+      font = "Helvetica Bold 23"
+      color = "#000000/light-gray/black:#CBFBFF/black/light-gray"
+    }
+  }
+}
+
+class {
+  frame {
+    top_left = ",,#000000/cyan/black,#0x250F:,,#000000/light-gray/black,#0x2554"
+    top = ",tiling,#000000/cyan/black,#0x2501:,,#000000/light-gray/black,#0x2550"
+    top_right = ",,#000000/cyan/black,#0x2513:,,#000000/light-gray/black,#0x2557"
+    left = ",tiling,#000000/cyan/black,#0x2503:,,#000000/light-gray/black,#0x2551"
+    right = ",tiling,#000000/cyan/black,#0x2503:,,#000000/light-gray/black,#0x2551"
+    bottom_left = ",,#000000/cyan/black,#0x2517:,,#000000/light-gray/black,#0x255A"
+    bottom = ",tiling,#000000/cyan/black,#0x2501:,,#000000/light-gray/black,#0x2550"
+    bottom_right = ",tiling,#000000/cyan/black,#0x251B:,,#000000/light-gray/black,#0x255D"
+  }
+
+  text {
+    color = "#000000/light-gray/black:black/light-gray"
+  }
+
+  term {
+    color = "cyan/black:light-gray/black"
+  }
+
+  edit {
+    color = "#000000/cyan/black:#000000/light-gray/black"
+  }
+
+  password {
+    color = "#000000/cyan/black:#000000/light-gray/black"
+  }
+}
+
+include "../icons/small"

@@ -1,0 +1,133 @@
+include "../minimum/template"
+
+screen {
+  background = "$$/desktop.png,minfit,#000000/light-gray/black"
+
+  panel {
+    id = __menu__
+    popup = abs
+    attach_left = "55%"
+    attach_right = "5%"
+    valign = center
+    max_items = 10
+  }
+
+  circular_progress {
+    id = __timeout__
+    background="$$/ubuntu-glow-96.png"
+    tick="$$/tick.png"
+    attach_left = 6%
+    valign = center
+    start_angle = 90
+
+  }
+
+  panel {
+    valign = bottom
+    halign = center
+    margin_size = 6/0
+    direction = left_to_right
+    space = 3
+    extend = 1
+
+    panel {
+      direction = left_to_right
+      space = 1
+
+      text {
+        text = "F1"
+        class = hotkey_title
+      }
+
+      text {
+        text = "Help"
+        class = hotkey_name
+      }
+    }
+
+    panel {
+      direction = left_to_right
+      space = 1
+
+      text {
+        text = "F2"
+        class = hotkey_title
+      }
+
+      text {
+        text = "Change theme"
+        class = hotkey_name
+      }
+    }
+
+    panel {
+      direction = left_to_right
+      space = 1
+
+      text {
+        text = "F3"
+        class = hotkey_title
+      }
+
+      text {
+        text = "Change resolution"
+        class = hotkey_name
+      }
+    }
+  }
+}
+
+template_menuitem {
+  panel {
+    parameters = "class=image.class:title=text.text"
+    direction = left_to_right
+    margin_size = 3/0
+    space = 1
+    image {}
+    text {
+      valign = center
+      font = "Fixed Bold 13"
+    }
+  }
+}
+
+class {
+  frame {
+    top_left = ",,#B08458/brown/black,#0x250F:,,#FFFFFF/light-gray/black,#0x2554"
+    top = ",tiling,#B08458/brown/black,#0x2501:,,#FFFFFF/light-gray/black,#0x2550"
+    top_right = ",,#B08458/brown/black,#0x2513:,,#FFFFFF/light-gray/black,#0x2557"
+    left = ",tiling,#B08458/brown/black,#0x2503:,,#FFFFFF/light-gray/black,#0x2551"
+    right = ",tiling,#B08458/brown/black,#0x2503:,,#FFFFFF/light-gray/black,#0x2551"
+    bottom_left = ",,#B08458/brown/black,#0x2517:,,#FFFFFF/light-gray/black,#0x255A"
+    bottom = ",tiling,#B08458/brown/black,#0x2501:,,#FFFFFF/light-gray/black,#0x2550"
+    bottom_right = ",tiling,#B08458/brown/black,#0x251B:,,#FFFFFF/light-gray/black,#0x255D"
+  }
+
+  hotkey_title {
+    color = "#FFFFFF/light-gray"
+    font = "smoothansi Regular 13"
+  }
+
+  hotkey_name {
+    color = "#B08458/brown"
+    font = "smoothansi Regular 13"
+  }
+
+  text {
+    color = "#B08458/brown/black:#FFFFFF/light-gray/black"
+  }
+
+  term {
+    color = "#B08458/brown/black:#FFFFFF/light-gray/black"
+  }
+
+  edit {
+    color = "#B08458/brown/black:#FFFFFF/light-gray/black"
+  }
+
+  password {
+    color = "#B08458/brown/black:#FFFFFF/light-gray/black"
+  }
+}
+
+include "../icons/small"

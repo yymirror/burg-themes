@@ -1,0 +1,16 @@
+include "../sora/theme"
+
+template_menuitem {
+  panel {
+    width = 24
+    height = 12
+
+    parameters = "class=image.class:title=panel.text.text"
+
+    image {
+      attach_vcenter = 0
+      attach_hcenter = 0
+      class = Unknown
+    }
+  }
+}

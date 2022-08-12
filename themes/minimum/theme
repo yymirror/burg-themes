@@ -1,0 +1,73 @@
+include "template"
+
+screen {
+  panel {
+    extend = 1
+    valign = center
+    halign = center
+
+    panel {
+      class = frame
+      id = __menu__
+      popup = abs
+      max_items = 10
+    }
+  }
+
+  panel {
+    id = __timeout__
+    attach_bottom = 1
+    width = 60%
+    halign = center
+    height = 1
+
+    progressbar {
+      width = 100%
+      height = 100%
+      color = "red:brown"
+    }
+  }
+}
+
+template_menuitem {
+  panel {
+    parameters = "class=image.class:title=text.text"
+    background = ":,,green,#0"
+    direction = left_to_right
+    image {}
+    text { valign = center }
+  }
+}
+
+class {
+  screen {
+    background = ",,blue"
+  }
+
+  text {
+    color = "light-gray/blue:light-gray/green"
+  }
+
+  frame {
+    top_left = ",,cyan/blue,#0x250F:,,light-gray/blue,#0x2554"
+    top = ",tiling,cyan/blue,#0x2501:,,light-gray/blue,#0x2550"
+    top_right = ",,cyan/blue,#0x2513:,,light-gray/blue,#0x2557"
+    left = ",tiling,cyan/blue,#0x2503:,,light-gray/blue,#0x2551"
+    right = ",tiling,cyan/blue,#0x2503:,,light-gray/blue,#0x2551"
+    bottom_left = ",,cyan/blue,#0x2517:,,light-gray/blue,#0x255A"
+    bottom = ",tiling,cyan/blue,#0x2501:,,light-gray/blue,#0x2550"
+    bottom_right = ",tiling,cyan/blue,#0x251B:,,light-gray/blue,#0x255D"
+  }
+
+  term {
+    color = "cyan/blue:light-gray/blue"
+  }
+
+  edit {
+    color = "cyan/blue:light-gray/blue"
+  }
+
+  password {
+    color = "cyan/blue:light-gray/blue"
+  }
+}

@@ -1,0 +1,7 @@
+class {
+  Ubuntu { image = "$$/icons-nopop/button-ubuntu.png:$$/icons-nopop/button-ubuntu-hover.png" }
+  Linux { image = "$$/icons-nopop/button-linux.png:$$/icons-nopop/button-linux-hover.png" }
+  MacOSX { image = "$$/icons-nopop/button-osx.png:$$/icons-nopop/button-osx-hover.png" }
+  Windows { image = "$$/icons-nopop/button-windows.png:$$/icons-nopop/button-windows-hover.png" }
+  Unknown { image = "$$/icons-nopop/button-unknown.png:$$/icons-nopop/button-unknown-hover.png" }
+}

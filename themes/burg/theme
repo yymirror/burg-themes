@@ -1,0 +1,147 @@
+include "../minimum/template"
+
+screen {
+  background = "$$/wallpaper.png,minfit,#000000/light-gray/black"
+
+  panel {
+    width = 100%
+    height = 38%/3
+  }
+
+  panel {
+    id = __menu__
+    popup = abs
+    extend = 1
+    halign = center
+    valign = top
+    max_items = 8
+  }
+
+  circular_progress {
+    id = __timeout__
+    background="$$/progressbg.png"
+    tick="$$/orb.png"
+    halign = center
+    attach_bottom = 10%
+    start_angle = 90
+
+  }
+
+   panel {
+    halign = center
+    margin_size = 6/0
+    direction = left_to_right
+    space = 3
+
+    panel {
+      direction = left_to_right
+      space = 1
+
+      text {
+        text = "F1"
+        class = hotkey_title
+      }
+
+      text {
+        text = "Help"
+        class = hotkey_name
+      }
+    }
+
+    panel {
+      direction = left_to_right
+      space = 1
+
+      text {
+        text = "F2"
+        class = hotkey_title
+      }
+
+      text {
+        text = "Change theme"
+        class = hotkey_name
+      }
+    }
+
+    panel {
+      direction = left_to_right
+      space = 1
+
+      text {
+        text = "F3"
+        class = hotkey_title
+      }
+
+      text {
+        text = "Change resolution"
+        class = hotkey_name
+      }
+    }
+  }
+}
+
+template_menuitem {
+  panel {
+    parameters = "class=image.class:title=text.text"
+    direction = left_to_right
+    margin_size = 3/0
+    space = 1
+    image {}
+    text {
+      valign = center
+      font = "Helvetica Bold 27"
+    }
+  }
+}
+
+class {
+  frame {
+    top_left = ",,#B08458/brown/black,#0x250F:,,#FFFFFF/light-gray/black,#0x2554"
+    top = ",tiling,#B08458/brown/black,#0x2501:,,#FFFFFF/light-gray/black,#0x2550"
+    top_right = ",,#B08458/brown/black,#0x2513:,,#FFFFFF/light-gray/black,#0x2557"
+    left = ",tiling,#B08458/brown/black,#0x2503:,,#FFFFFF/light-gray/black,#0x2551"
+    right = ",tiling,#B08458/brown/black,#0x2503:,,#FFFFFF/light-gray/black,#0x2551"
+    bottom_left = ",,#B08458/brown/black,#0x2517:,,#FFFFFF/light-gray/black,#0x255A"
+    bottom = ",tiling,#B08458/brown/black,#0x2501:,,#FFFFFF/light-gray/black,#0x2550"
+    bottom_right = ",tiling,#B08458/brown/black,#0x251B:,,#FFFFFF/light-gray/black,#0x255D"
+  }
+
+  hotkey_title {
+    color = "cyan/blue:dark-gray/blue"
+    font = "Helvetica Bold 27"
+  }
+
+  hotkey_name {
+    color = "#FFFFFF/light-gray"
+    font = "Helvetica Bold 27"
+  }
+
+  text {
+    color = "light-grey/black:#FFFFFF/light-gray/black"
+  }
+
+  term {
+    color = "light-grey/black:#FFFFFF/light-gray/black"
+  }
+
+  edit {
+    color = "light-grey/black:#FFFFFF/light-gray/black"
+  }
+
+  password {
+    color = "light-grey/black:#FFFFFF/light-gray/black"
+  }
+}
+
+menu {
+
+  Shutdown {
+    command = "halt"
+  }
+
+  Restart {
+    command = "reboot"
+  }
+}
+
+include "../icons/small"
